@@ -1,0 +1,22 @@
+--- 2.2.0.log	2020-11-09 21:49:37.000000000 +0900
++++ 3.0.0.log	2020-11-09 21:50:03.000000000 +0900
+@@ -2,7 +2,7 @@
+   Mnemonic: ObjcCompile
+   Target: //:objc
+   Configuration: apl-darwin_x86_64-fastbuild
+-  ActionKey: f7c0d8964b39841587b1bf6c5e951267dc36ed403f0ad17d03455f504594e55d
++  ActionKey: 9bce7f1ed415038935835f0c5c2ef3cf49fde06b717cee34bc0ed73b89b52774
+   Inputs: [bazel-out/apl-darwin_x86_64-fastbuild/bin/Empty.m, bazel-out/host/internal/_middlemen/external_Slocal_Uconfig_Ucc_Cosx_Utools_Udarwin_Ux86_U64, external/bazel_tools/tools/cpp/grep-includes.sh]
+   Outputs: [bazel-out/apl-darwin_x86_64-fastbuild/bin/_objs/objc/arc/Empty.d, bazel-out/apl-darwin_x86_64-fastbuild/bin/_objs/objc/arc/Empty.o]
+   ExecutionInfo: {requires-darwin: '', supports-xcode-requirements-set: ''}
+@@ -35,6 +35,10 @@
+     . \
+     -iquote \
+     bazel-out/apl-darwin_x86_64-fastbuild/bin \
++    -iquote \
++    external/repo1 \
++    -iquote \
++    bazel-out/apl-darwin_x86_64-fastbuild/bin/external/repo1 \
+     -MD \
+     -MF \
+     bazel-out/apl-darwin_x86_64-fastbuild/bin/_objs/objc/arc/Empty.d \

@@ -1,0 +1,60 @@
+action 'Compiling Empty.m'
+  Mnemonic: ObjcCompile
+  Target: //:objc
+  Configuration: apl-darwin_x86_64-fastbuild
+  ActionKey: 9bce7f1ed415038935835f0c5c2ef3cf49fde06b717cee34bc0ed73b89b52774
+  Inputs: [bazel-out/apl-darwin_x86_64-fastbuild/bin/Empty.m, bazel-out/host/internal/_middlemen/external_Slocal_Uconfig_Ucc_Cosx_Utools_Udarwin_Ux86_U64, external/bazel_tools/tools/cpp/grep-includes.sh]
+  Outputs: [bazel-out/apl-darwin_x86_64-fastbuild/bin/_objs/objc/arc/Empty.d, bazel-out/apl-darwin_x86_64-fastbuild/bin/_objs/objc/arc/Empty.o]
+  ExecutionInfo: {requires-darwin: '', supports-xcode-requirements-set: ''}
+  Command Line: (exec external/local_config_cc/wrapped_clang \
+    -arch \
+    x86_64 \
+    '-D_FORTIFY_SOURCE=1' \
+    -fstack-protector \
+    -fcolor-diagnostics \
+    -Wall \
+    -Wthread-safety \
+    -Wself-assign \
+    -fno-omit-frame-pointer \
+    -O0 \
+    -DDEBUG \
+    -Wshorten-64-to-32 \
+    -Wbool-conversion \
+    -Wconstant-conversion \
+    -Wduplicate-method-match \
+    -Wempty-body \
+    -Wenum-conversion \
+    -Wint-conversion \
+    -Wunreachable-code \
+    -Wmismatched-return-types \
+    -Wundeclared-selector \
+    -Wuninitialized \
+    -Wunused-function \
+    -Wunused-variable \
+    -iquote \
+    . \
+    -iquote \
+    bazel-out/apl-darwin_x86_64-fastbuild/bin \
+    -iquote \
+    external/repo1 \
+    -iquote \
+    bazel-out/apl-darwin_x86_64-fastbuild/bin/external/repo1 \
+    -MD \
+    -MF \
+    bazel-out/apl-darwin_x86_64-fastbuild/bin/_objs/objc/arc/Empty.d \
+    -DOS_MACOSX \
+    -fno-autolink \
+    -isysroot \
+    __BAZEL_XCODE_SDKROOT__ \
+    -F__BAZEL_XCODE_SDKROOT__/System/Library/Frameworks \
+    -F__BAZEL_XCODE_DEVELOPER_DIR__/Platforms/MacOSX.platform/Developer/Library/Frameworks \
+    -fobjc-arc \
+    '-mmacosx-version-min=10.15' \
+    -O0 \
+    '-DDEBUG=1' \
+    -c \
+    bazel-out/apl-darwin_x86_64-fastbuild/bin/Empty.m \
+    -o \
+    bazel-out/apl-darwin_x86_64-fastbuild/bin/_objs/objc/arc/Empty.o)
+  ExecutionInfo: {requires-darwin: '', supports-xcode-requirements-set: ''}
+
